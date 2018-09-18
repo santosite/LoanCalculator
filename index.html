@@ -1,0 +1,94 @@
+<!-- USANDO BOOTSTRAP -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Loan Calculator</title>
+</head>
+<body class="bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card card-body text-center mt-5 bg-info">
+                    <h1 class="heading display-5 pb-3 bg-warning">Loan Calculator </h1>
+                    <form id="loan-form">
+                        <!-- ENTER LOAN INPUT -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input type="number" class="form-control" id="amount" placeholder="Loan Amount">
+                            </div>
+                        </div>
+                        <!-- ENTER INTEREST INPUT -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">%</span>
+                                <input type="number" class="form-control" id="interest" placeholder="Interest">
+                            </div>
+                        </div>
+                        <!-- ENTER YEARS TO REPAY -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="years" placeholder="Years to Repay">
+                            </div>
+                        </div>
+                        
+                        <!-- BUTTON SUBMIT    -->
+                        <!-- ENTER LOAN INPUT -->
+                        <div class="form-group">
+                                <input type="submit" class="btn btn-dark btn-lock bg-danger text light" value="Calculate"><input type="reset" class ="btn btn-light btn-lock bg-success text light" value="Reset">         
+                        </div>
+
+                        
+                    </form>
+
+
+                    <!-- LOADING EFFECT -->
+                    <div class="loading" id ="loader">
+                        <img src="loader.gif" alt="">
+                    </div>
+                    
+                    <!-- RESULTS -->
+                    <div id="results">
+                        <h5>Results</h5>
+                        <!-- MONTHLY PAYMENT -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text bg-light text-dark" >Monthly Payment</span>
+                                <input type="number" class="form-control" id="monthly-payment" disabled>
+                            </div>
+                        </div>
+                        <!-- TOTAL PAYMENT -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text bg-light text-dark">Total Payment</span>
+                                <input type="number" class="form-control" id="total-payment" disabled>
+                            </div>
+                        </div>
+                        <!-- TOTAL INTERESTS -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text bg-light text-dark">Total Interest</span>
+                                <input type="number" class="form-control" id="total-interests" disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+   <script src="app.js"></script>
+ </body>
+</html>
